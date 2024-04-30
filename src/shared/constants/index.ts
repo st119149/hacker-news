@@ -1,0 +1,1 @@
+export const NEWS_UPDATE_INTERVAL = 60000;
