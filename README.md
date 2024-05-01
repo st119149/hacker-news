@@ -1,4 +1,4 @@
-## [Ссылка на приложение](https://prod-app51915502-88b77ef38b41.pages-ac.vk-apps.com/index.html) id=51915502
+## [Ссылка на приложение](https://stage-app51915502-b143bc5abb8c.pages.vk-apps.com/index.html) id=51915502
 
 # Basic [VK Bridge](https://github.com/VKCOM/vk-bridge) + [VKUI](https://github.com/VKCOM/VKUI) + [VK Miniapps Router](https://github.com/VKCOM/vk-mini-apps-router) app
 
