@@ -3,6 +3,7 @@ import { FC, useMemo, useState } from "react";
 // @ts-expect-error
 import ReactHtmlParser from "react-html-parser";
 import { useComment } from "../models/useComment";
+import styles from "./Comment.module.scss";
 
 interface CommentProps {
   id: number;
@@ -21,7 +22,7 @@ export const Comment: FC<CommentProps> = ({ id }) => {
   if (isLoading) return <Spinner />;
 
   return (
-    <Div>
+    <div className={styles.component}>
       <Caption level="1">{comment?.by}</Caption>
       <div>{ReactHtmlParser(comment?.text)}</div>
       <Footnote caps>{time}</Footnote>
@@ -31,6 +32,6 @@ export const Comment: FC<CommentProps> = ({ id }) => {
           {comment?.kids?.length} answers
         </Link>
       )}
-    </Div>
+    </div>
   );
 };

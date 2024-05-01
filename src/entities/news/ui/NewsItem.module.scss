@@ -1,0 +1,9 @@
+.component [class='vkuiCard'] {
+    cursor: pointer;
+    transition: 0.1s ease box-shadow;
+
+    &:hover {
+        box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.1);
+
+    }
+}

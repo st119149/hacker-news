@@ -3,6 +3,7 @@ import { Card, ContentCard, Div } from "@vkontakte/vkui";
 import { FC, useMemo } from "react";
 import { Icon12FireAlt } from "@vkontakte/icons";
 import { News } from "../../../shared/types/newsTypes";
+import styles from "./NewsItem.module.scss";
 
 interface NewsItemProps {
   data: News;
@@ -16,7 +17,7 @@ export const NewsItem: FC<NewsItemProps> = ({ data }) => {
   const routeNavigator = useRouteNavigator();
 
   return (
-    <Div>
+    <Div className={styles.component}>
       {/* todo: add data to route state */}
       <Card onClick={() => routeNavigator.push(`/${data.id}`)}>
         <ContentCard

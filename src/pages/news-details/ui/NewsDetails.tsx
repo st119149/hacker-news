@@ -12,6 +12,7 @@ import { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { Comment } from "../../../entities/comment/ui/Comment";
 import { getNewsDetails } from "../../../entities/news/api";
 import { News } from "../../../shared/types/newsTypes";
+import styles from "./NewsDetails.module.scss";
 
 export const NewsDetails: FC<NavIdProps> = ({ id }) => {
   const routeNavigator = useRouteNavigator();
@@ -45,7 +46,12 @@ export const NewsDetails: FC<NavIdProps> = ({ id }) => {
   return (
     <Panel id={id}>
       <Div>
-        <Button onClick={() => routeNavigator.push("/")}>back</Button>
+        <Button
+          className={styles.backButton}
+          onClick={() => routeNavigator.push("/")}
+        >
+          back
+        </Button>
 
         {isLoading ? (
           <ScreenSpinner />
@@ -57,7 +63,9 @@ export const NewsDetails: FC<NavIdProps> = ({ id }) => {
               </a>
             </Title>
             <Subhead>
-              {newsDetails?.by} | {time}
+              author: {newsDetails?.by}
+              <br />
+              publish date: {time}
             </Subhead>
             <hr />
             <Title level="3">

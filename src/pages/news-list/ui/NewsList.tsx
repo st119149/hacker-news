@@ -40,17 +40,16 @@ export const NewsList: FC<NavIdProps> = ({ id }) => {
   return (
     <SplitLayout popout={popout}>
       <Panel id={id}>
-        <PanelHeader>Hacker News</PanelHeader>
-
-        <Div>
-          <Button disabled={!!popout} onClick={handleFetch}>
+        <PanelHeader>
+          Hacker News{" "}
+          <Button loading={!!popout} onClick={handleFetch}>
             update
           </Button>
+        </PanelHeader>
 
-          {news?.map((item) => (
-            <NewsItem key={item.id} data={item} />
-          ))}
-        </Div>
+        {news?.map((item) => (
+          <NewsItem key={item.id} data={item} />
+        ))}
       </Panel>
     </SplitLayout>
   );
